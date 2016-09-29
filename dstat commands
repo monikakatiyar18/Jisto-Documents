@@ -1,0 +1,19 @@
+dstat -tn -N eth0 --tcp 50
+dstat -cdl -D sda1
+dstat -tcmsn -N eth0
+dstat -Tcdrgilmnsp --noupdate 5 >> dstat_jistoServer_2016_08_31_13_02.csv &
+
+total cpu usage : usr sys idl wai hiq sig (user, system, idle, wait, hardware interrupt, software interrupt)
+dsk/total : read write (disk stats)
+io total : read write 
+paging : in out (page in page out)
+interrupts: 3 numbers (interrupt stats)
+load avg : 1m 5m 15m (load average stats-1 min, 5 mins, 15mins)
+memory usasge : used buff cach free (used, buffer, cache, free)
+net total : recv send
+swap : used freed
+
+
+
+http://linux.die.net/man/1/dstat
+dstat -tclmp --noupdate 600 >> test_JistoServer/performance_metric/dstat_jistoServer_2016_08_31_13_02.csv &

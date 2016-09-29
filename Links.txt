@@ -1,0 +1,15 @@
+*AWS
+https://www.reddit.com/r/devops/comments/4md9bj/how_do_you_maintain_your_private_docker_registry/?st=it2nm8g3&sh=9c8460be
+--S3 : little slower than registry
+
+
+* Proposal: docker prune: garbage collection of unreachable filesystem layers #6802
+https://github.com/docker/docker/issues/6802
+
+*Docker not to be used for database deployment
+https://intercityup.com/blog/running-upgrading-mysql-server-docker.html
+
+*Docker :
+https://hostpresto.com/community/tutorials/working-with-docker-volumes/
+https://lebkowski.name/docker-volumes/
+http://www.tricksofthetrades.net/2016/01/07/docker-administration-applications/

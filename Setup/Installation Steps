@@ -1,0 +1,114 @@
+Installing Chrome
+----------------------------------------------
+
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
+Update repository :
+sudo apt update
+
+Install google chrome :
+sudo apt install google-chrome-stable
+-----------------------------------------
+
+LAUNCHER AT BOTTOM
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+http://www.2daygeek.com/top-important-things-to-do-after-installing-ubuntu-16-04-lts-xenial-xerus/#
+------------------------------------------
+
+https://www.digitalocean.com/community/tutorials/how-to-install-go-1-6-on-ubuntu-14-04
+http://sourcedigit.com/19868-install-git-2-9-on-ubuntu-16-04-systems/
+https://www.computersnyou.com/3254/install-atom-editor-ubuntu-14-04/
+http://tecadmin.net/install-oracle-java-8-jdk-8-ubuntu-via-ppa/#
+
+
+--Chrome
+--GoLang
+--Atom + go-plus + terminal-plus + atom-alignment
+--Java8
+
+--GIT
+--GIT Kracken
+--slack
+--zoom
+
+sudo mv go /usr/local
+
+cd Downloads
+sudo dpkg -i gitkraken-amd64.deb
+sudo apt-get install -f
+
+git config --global user.email "monika@jeavio.com"
+
+
+sudo nano ~/.profile
+source ~/.profile
+
+
+#export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/work
+
+export GOPATH=$HOME/work/src/Jisto
+export PATH=$PATH:$GOPATH/bin
+
+
+For configuration of GitKraken------
+Change chrome setting
+cd /$HOME/.local/share/applications
+sudo gedit google-chrome.desktop
+change Exec=/opt/google/chrome/chrome to Exec=/opt/google/chrome/chrome %U
+
+Settings > 
+General > Project Directory : /home/usr
+GIT Config : username and email
+Authentication : Uncheck use local SSH agents > Generate key, GitHub > connect
+
+[] > Init > GitHub > Account select > Name of repo > check clone after init > repository path > create repo and clone : creates a repository on GITHUB and clones it on local
+Message > initial commit yes
+
+To clone : [] > CLone > URL > use https for cloning since SSH gives error :connection time out if there is firewall or proxy
+
+
+Created a GitHub account, pointed the GitKracken to the GitHub account.
+
+Handson completed on GitKracken covering :
+1. Initializing / cloning / deleting a git repository, Push, Pull, Fetch
+2. Create / delete / checkout / rebase / merge branch
+3. Commit files/folders, cherrypick commit
+4. Creating tags, Revert changes (Soft / Hard / Mixed)
+5. Stash, Stash Pop, Stash delete
+6. Using GIT Flow on GitKraken
+7. All these functions with Submodule - Nested Repository
+
+Add folder > Develop>commit >  checkout master > merge master into develop
+del folder > Develop > commit > checkout master > rebase master to develop > push
+
+
+
+APACHE
+
+
+changed in 
+My computer/etc/apache2/sites-available/000-default.conf
+
+Added root directories for 2 ports 80 and 8080
+Listen 8080 port in ports.conf at My computer/etc/apache2/
+
+
+PROTOCOL BUFFER COMPILER
+go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
+set path for protocol buffer in .profile file for gopath/bin
+
+
+GNUPLOT
+
+sudo apt-get update
+sudo apt-get install gnuplot
+
+DSTAT
+sudo apt-get update
+sudo apt-get install dstat
+
+
+
